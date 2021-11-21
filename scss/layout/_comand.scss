@@ -1,0 +1,46 @@
+.comand-section {
+  background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.comand-list {
+  display: flex;
+}
+
+.comand-list__content {
+  margin-right: 30px;
+  width: 270px;
+  height: 428px;
+  left: 215px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.comand__title {
+  @include fonttitle();
+  margin-bottom: 50px;
+  color: var(--title-color-text);
+}
+
+.comand-list__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color-text);
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.comand-list__discription {
+  text-align: center;
+  margin-bottom: 16px;
+}

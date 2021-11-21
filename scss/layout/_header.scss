@@ -1,0 +1,99 @@
+.header {
+  background-color: #ffffff;
+  height: 80px;
+  border-bottom: 1px solid #ececec;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+//навигация по сайту
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+}
+
+.header-contact {
+  display: flex;
+
+  margin-left: auto;
+}
+.header-contact li {
+  margin-right: 50px;
+}
+.site-contact li:last-child {
+  margin-right: 0px;
+}
+
+.header-nav li {
+  margin-right: 50px;
+}
+
+.header-nav li:last-child {
+  margin-right: 0px;
+}
+
+.header-nav a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  display: block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  color: var(--title-color-text);
+}
+
+.header-nav a:hover,
+.header-nav a:focus {
+  outline: none;
+  color: var(--action-color);
+}
+
+.header-contact a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color-rext);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-contact a:hover,
+.header-contact a:focus {
+  outline: none;
+  color: var(--action-color);
+}
+
+.header-nav__item--current a {
+  color: var(--action-color);
+}
+
+.header-nav__item--current::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  display: block;
+  background-color: var(--action-color);
+  border-radius: 2px;
+}
+
+.icon-contact {
+  margin-right: 10px;
+  fill: #757575;
+}
+
+.header-contact__items:hover .icon-contact,
+.header-contact a:focus .icon-contact {
+  fill: var(--action-color);
+}
