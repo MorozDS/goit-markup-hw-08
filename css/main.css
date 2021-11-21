@@ -301,20 +301,49 @@ img {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .logo {
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--action-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--action-color);
+  }
 }
 
 .studio {
@@ -333,33 +362,88 @@ img {
 }
 
 .header {
+  width: 100%;
   background-color: #ffffff;
-  height: 80px;
   border-bottom: 1px solid #ececec;
 }
 
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.burger-btn {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
+.burger-btn-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
+  border: none;
+}
+
+.close-btn-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .header-nav {
   display: flex;
   align-items: center;
-  margin-left: 93px;
+  margin-left: 88px;
+  margin-right: 84px;
 }
 
-.header-contact {
-  display: flex;
-  margin-left: auto;
-}
-
-.header-contact li {
-  margin-right: 50px;
-}
-
-.site-contact li:last-child {
-  margin-right: 0px;
+@media screen and (max-width: 767px) {
+  .header-nav {
+    display: none;
+  }
 }
 
 .header-nav li {
@@ -375,8 +459,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 31px;
-  padding-bottom: 31px;
+  padding-top: 34px;
+  padding-bottom: 34px;
   display: block;
   transition-property: color;
   transition-duration: 250ms;
@@ -388,6 +472,45 @@ img {
 .header-nav a:focus {
   outline: none;
   color: var(--action-color);
+}
+
+.header-nav__item--current a {
+  color: var(--action-color);
+}
+
+.header-nav__item--current::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  display: block;
+  background-color: var(--action-color);
+  border-radius: 2px;
+}
+
+.header-contact {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .header-contact {
+    display: none;
+  }
+}
+
+.header-contact li {
+  margin-right: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-contact li {
+    margin-bottom: 10px;
+  }
+}
+
+.site-contact li:last-child {
+  margin-right: 0px;
 }
 
 .header-contact a {
@@ -410,19 +533,6 @@ img {
   color: var(--action-color);
 }
 
-.header-nav__item--current a {
-  color: var(--action-color);
-}
-
-.header-nav__item--current::after {
-  content: '';
-  width: 100%;
-  height: 4px;
-  display: block;
-  background-color: var(--action-color);
-  border-radius: 2px;
-}
-
 .icon-contact {
   margin-right: 10px;
   fill: #757575;
@@ -434,9 +544,10 @@ img {
 }
 
 .hero__tittle {
+  font-style: normal;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -444,21 +555,73 @@ img {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero__tittle {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+}
+
 .hero {
   background-color: #c4c4c4;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .overlay {
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imghero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mob.jpg);
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@2x-mob.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@2x-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/imghero.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@2-desktop.jpg");
+  }
 }
 
 .hero__btn {
