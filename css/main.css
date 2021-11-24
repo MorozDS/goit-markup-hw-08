@@ -659,7 +659,12 @@ img {
   text-transform: uppercase;
   margin-bottom: 10px;
   color: var(--title-color-text);
-  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .peculiarities-block__tittle {
+    text-align: center;
+  }
 }
 
 .icon-block__svg {
@@ -676,15 +681,11 @@ img {
   background-color: #f5f4fa;
 }
 
-.peculiarities-block {
-  display: block;
-  align-items: center;
-}
-
 @media screen and (min-width: 768px) {
   .peculiarities-block {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
   }
 }
 
@@ -693,8 +694,8 @@ img {
   padding-top: 60px;
 }
 
-.peculiarities-block__content {
-  width: 450px;
+.peculiarities-block__content:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -702,6 +703,12 @@ img {
     height: 251px;
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .peculiarities-block__content {
+    width: calc((100% - 8 * 15px) / 4);
   }
 }
 
