@@ -279,6 +279,7 @@ img {
 .social-list {
   display: flex;
   justify-content: center;
+  padding-bottom: 24px;
 }
 
 .social-list__icon {
@@ -700,7 +701,6 @@ img {
 
 @media screen and (min-width: 768px) {
   .peculiarities-block__content {
-    height: 251px;
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
@@ -709,11 +709,18 @@ img {
 @media screen and (min-width: 1200px) {
   .peculiarities-block__content {
     width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
   }
 }
 
 .do-section {
   padding-bottom: 94px;
+}
+
+@media screen and (max-width: 1199px) {
+  .do-section {
+    display: none;
+  }
 }
 
 .do-container__title {
@@ -762,39 +769,71 @@ img {
 }
 
 .comand-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
-.comand-list {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .comand-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .comand-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .comand-list__content {
-  margin-right: 30px;
-  width: 270px;
-  height: 428px;
-  left: 215px;
+  margin-bottom: 30px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.comand-list__content:last-child {
-  margin-right: 0px;
+@media screen and (min-width: 768px) {
+  .comand-list__content {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comand-list__content {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
 }
 
 .comand__title {
   font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
   color: var(--title-color-text);
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .comand__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+    color: var(--title-color-text);
+  }
 }
 
 .comand-list__name {
@@ -810,24 +849,45 @@ img {
 
 .comand-list__discription {
   text-align: center;
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .cliets-title {
   font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
+  font-weight: 700px;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
   color: var(--title-color-text);
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .cliets-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+    color: var(--title-color-text);
+  }
 }
 
 .clients-block__icon {
@@ -843,14 +903,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .clients-block__content {
-  margin-right: 30px;
-}
-
-.clients-block__content:last-child {
-  margin-right: 0px;
+  width: calc((100% - 15px * 4) / 2);
+  margin: 15px;
 }
 
 .clients-block__content:focus .clients-block__link,
@@ -859,9 +918,22 @@ img {
   border-color: var(--action-color);
 }
 
+@media screen and (min-width: 768px) {
+  .clients-block__content {
+    width: calc((100% - 15px * 6) / 3);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-block__content {
+    width: calc((100% - 15px * 12) / 6);
+    margin: 15px;
+  }
+}
+
 .clients-block__link {
   height: 92px;
-  width: 170px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   display: flex;
