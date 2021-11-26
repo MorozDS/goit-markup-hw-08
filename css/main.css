@@ -901,8 +901,6 @@ img {
 
 .clients-block {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   margin: -15px;
 }
@@ -961,18 +959,39 @@ img {
 }
 
 .footer-block {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-block {
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo-address-block {
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-address-block {
+    padding: 0px;
+  }
 }
 
 .container .address .mail {
   display: inline-block;
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .address {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .address a {
@@ -997,7 +1016,21 @@ img {
 }
 
 .footer-social {
-  margin-left: 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-social {
+    padding-top: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-social {
+    padding: 0px;
+    margin-left: 70px;
+  }
 }
 
 .join {
@@ -1041,24 +1074,51 @@ img {
   background-color: var(--action-color);
 }
 
-.footer-subscribe {
-  margin-left: 93px;
+@media screen and (min-width: 768px) {
+  .tablet {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .subscribe-wrap {
+  justify-content: center;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-wrap {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .input-subscribe {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding: 16px 15px;
   background: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-right: 12px;
+  margin-bottom: 20px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .input-subscribe {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .input-subscribe {
+    margin-right: 12px;
+    width: 358px;
+  }
 }
 
 .subscribe-header {
@@ -1085,7 +1145,6 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
-  position: relative;
   display: flex;
   align-items: center;
   text-align: center;

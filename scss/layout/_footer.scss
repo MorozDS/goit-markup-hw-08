@@ -5,17 +5,35 @@
 }
 
 .footer-block {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    text-align: start;
+
+    justify-content: space-between;
+  }
+}
+
+.logo-address-block {
+  @media screen and (min-width: 768px) {
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0px;
+  }
 }
 
 .container .address .mail {
   display: inline-block;
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .address {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
 }
 
 .address a {
@@ -42,7 +60,17 @@
 //Социальные ссылки
 
 .footer-social {
-  margin-left: 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0px;
+    margin-left: 70px;
+  }
+  //   // margin-left: 70px;
 }
 .join {
   font-family: Roboto;
@@ -79,33 +107,54 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-&:hover,
-&:focus {
-  background-color: var(--action-color);
-}
+  &:hover,
+  &:focus {
+    background-color: var(--action-color);
+  }
 }
 
-
+.tablet {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 //Подписка
-.footer-subscribe {
-  margin-left: 93px;
-}
 
 .subscribe-wrap {
+  justify-content: center;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .input-subscribe {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding: 16px 15px;
   background: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-right: 12px;
+  margin-bottom: 20px;
+
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: white;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    width: 358px;
+  }
 }
 
 .subscribe-header {
@@ -133,7 +182,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
-  position: relative;
+  // position: relative;
   display: flex;
   align-items: center;
   text-align: center;
