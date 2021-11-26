@@ -962,10 +962,20 @@ img {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer-block {
     display: flex;
     text-align: start;
+    align-items: baseline;
     justify-content: space-between;
   }
 }
@@ -1074,10 +1084,9 @@ img {
   background-color: var(--action-color);
 }
 
-@media screen and (min-width: 768px) {
-  .tablet {
-    display: flex;
-    justify-content: space-between;
+@media screen and (min-width: 1200px) {
+  .footer-subscribe {
+    margin-left: 93px;
   }
 }
 
