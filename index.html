@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/main.min.css" />
-   
-    
 </head>
+
+
 <body>
     <!--Шапка сайта-->
     <header class="header">
@@ -55,6 +55,27 @@
             <use href="./images/icons.svg#icon-close-menu"></use>
         </svg>
     </button> 
+<ul class=" mobile-menu__nav list">
+    <li class="current"><a href="">Студия </a></li>
+    <li><a href="./porfolio.html">Портфолио</a></li>
+    <li><a href="">Контакты</a></li>
+</ul>
+
+<div>
+<ul class="mobile-menu__contact list" >
+    <li class="mobile-menu__contact--item"> <a class="tel" href="tel:+380961111111">+38 096 111 11 11 </a></li>
+    <li class="mobile-menu__contact--item"> <a class="mail" href="mailto:info@devstudio.com"> info@devstudio.com</a> </li>
+
+</ul>
+
+<ul class="mobile-menu__social list">
+    <li class="mobile-menu__social--item" > <a href=""> Instagram</a></li>
+    <li class="mobile-menu__social--item" > <a href=""> Twitter</a></li>
+    <li class="mobile-menu__social--item" > <a href=""> Facebook</a></li>
+    <li class="mobile-menu__social--item" > <a href=""> Linkedin</a></li>
+</ul>
+</div>
+
 </div>
 
 
@@ -120,7 +141,17 @@
         <ul class="list do-container__list">
             <li class="do-container__content">
                 <div class="block-over">
-                <img src="./images/img.png" alt="Набор текста на клавиатуре" width="370" >
+                    <picture>
+                        <source media="(min-width: 1200px)" 
+                        srcset="./images/img.png 1x, 
+                        ./images/img@2x.jpg 2x" 
+                        />
+
+                        <img src="#" alt="Набор текста на клавиатуре">
+
+
+                    </picture>
+                <!-- <img src="./images/img.png" alt="Набор текста на клавиатуре" width="370" > -->
                 <p class="block-over__text">Десктопные приложения</p>
                 </div>
             </li>
@@ -147,7 +178,50 @@
         <h2 class="comand__title">Наша команда</h2>
         <ul class="list comand-list">
             <li class="comand-list__content">
-                <img class="comand-list__img" src="./images/img(4).jpg" alt="Игорь Демьяненко" >
+
+
+<picture>
+<source media="(min-width: 1200px)" srcset=" 
+    ./images/comand/comand-desktop1.jpg 1x, 
+    ./images/comand/comand-desktop1@2x.jpg 2x " />
+
+
+    <source media="(min-width: 1200px)" srcset=" 
+        ./images/comand/wcomand-desktop1.webp 1x, 
+        ./images/comand/wcomand-desktop1@2x.webp 2x " type="image/webp" />
+
+
+    <source media="(min-width: 768px)" srcset=" 
+    ./images/comand/comand-tablet1.jpg 1x, 
+    ./images/comand/comand-tablet1@2x.jpg 2x " />  
+
+
+    <source media="(min-width: 768px)" srcset=" 
+    ./images/comand/wcomand-tablet1.webp 1x, 
+    ./images/comand/wcomand-tablet1@2x.webp 2x "
+    
+    type="image/webp"
+    />
+
+     <source media="(max-width: 767px)" srcset="./images/comand/comand-mob1.jpg 1x, 
+      ./images/comand/comand-mob1@2x.jpg 2x" />
+
+      <source media="(max-width: 767px)" srcset="./images/comand/wcomand-mob1.webp 1x, 
+      ./images/comand/wcomand-mob1@2x.webp 2x" 
+     type="image/webp"
+       />
+
+
+<img class="comand-list__img" src="#" alt="Игорь Демьяненко">
+                </picture>
+
+
+
+                <!-- <img class="comand-list__img" src="#" alt="Игорь Демьяненко" > -->
+
+                <!-- ./images/img(4).jpg -->
+
+
                 <h3 class="comand-list__name">Игорь Демьяненко</h3>
                 <p lang="en" class="comand-list__discription">Product Designer</p>
                 <ul class=" list social-list">
