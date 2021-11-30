@@ -10,10 +10,12 @@
 }
 
 .comand-list {
+  margin-bottom: -30px;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
+    margin-bottom: -30px;
+    margin-right: -30px;
   }
 }
 
@@ -26,13 +28,15 @@
   border-radius: 0px 0px 4px 4px;
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 4 * 15px) / 2);
-    margin: 15px;
+    width: calc((100% - 2 * 30px) / 2);
+    margin-botom: 30px;
+    margin-right: 30px;
   }
 
   @media screen and (min-width: 1200px) {
-    width: calc((100% - 8 * 15px) / 4);
-    margin: 15px;
+    width: calc((100% - 4 * 30px) / 4);
+
+    margin-right: 30px;
   }
 }
 
